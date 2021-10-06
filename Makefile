@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 17:06:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/06 18:53:28 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/06 19:55:00 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,6 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 				@ar rcs $(NAME) $(OBJS)
-				@ranlib $(NAME)
 
 %.o: %.c
 				@$(CC) $(FLAGS) -I -c $< -o $@
