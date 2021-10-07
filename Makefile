@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 17:06:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/07 23:48:52 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/08 00:44:39 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRC =		ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isascii.c \
-			ft_isprint.c
+			ft_isprint.c \
+			ft_strlen.c
 
 SRCS =		$(SRC)
 
