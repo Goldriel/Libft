@@ -34,6 +34,13 @@ $(NAME):	$(OBJS)
 %.o: %.c
 				@$(CC) $(FLAGS) -I -c $< -o $@
 
+# Правило для убунту
+#Удалить потом или закоментировать
+
+so:
+	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
+
 clean:
 				@$(RM) -f $(OBJS)
 

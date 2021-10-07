@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
 int	ft_isalnum(int c)
 {
@@ -20,3 +22,16 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+/*
+void main(void)
+{
+	int i = -1;
+	while (i < 530)
+	{
+		printf("is a %d ", i);
+		printf("func C %d ", isalnum(i));
+		printf(" %d\n ", ft_isalnum(i));
+		i++;
+	}
+}
+*/
