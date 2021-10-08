@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 18:58:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/08 20:30:29 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/08 20:33:06 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ LIST =		ft_isalnum.c\
 			ft_isalpha.c\
 			ft_isascii.c\
 			ft_isdigit.c\
-			ft_print.c\
+			ft_isprint.c\
 			ft_strlen.c
 
 OBJ = $(patsubst %.c, %.o, $(LIST))
