@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 17:06:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/08 16:25:58 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/08 17:45:57 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,15 +34,15 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 				@ar rcs $(NAME) $(OBJS)
 
-%.o: %.c
+%.o: %.c libft.h
 				@$(CC) $(FLAGS) -I -c $< -o $@
 
 # Правило для убунту
 #Удалить потом или закоментировать
 
-so:
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+#so:
+#	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
+#	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 clean:
 				@$(RM) -f $(OBJS)
