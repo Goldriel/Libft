@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 17:06:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/08 00:44:39 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/08 16:25:58 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC =		ft_isalnum.c \
 
 SRCS =		$(SRC)
 
-OBJS =		$(SRCS: .c=.o)
+OBJS =		$(SRCS:.c=.o)
 
 all:		$(NAME)
 
