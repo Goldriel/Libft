@@ -5,51 +5,38 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/06 17:06:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/08 17:45:57 by jarrakis         ###   ########.fr        #
+#    Created: 2021/10/08 18:58:28 by jarrakis          #+#    #+#              #
+#    Updated: 2021/10/08 20:30:29 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC =		gcc
+NAME = libft.a
 
-FLAGS =		-Wall -Wextra -Werror
-
-RM =		rm -rf
-
-NAME =		libft.a
-
-SRC =		ft_isalnum.c \
-			ft_isalpha.c \
-			ft_isdigit.c \
-			ft_isascii.c \
-			ft_isprint.c \
+LIST =		ft_isalnum.c\
+			ft_isalpha.c\
+			ft_isascii.c\
+			ft_isdigit.c\
+			ft_print.c\
 			ft_strlen.c
 
-SRCS =		$(SRC)
+OBJ = $(patsubst %.c, %.o, $(LIST))
 
-OBJS =		$(SRCS:.c=.o)
+FLAGS = -Wall -Wextra -Werror
 
-all:		$(NAME)
+all : $(NAME)
 
-$(NAME):	$(OBJS)
-				@ar rcs $(NAME) $(OBJS)
+$(NAME) : $(OBJ)
+	ar rcs $(NAME) $?
 
-%.o: %.c libft.h
-				@$(CC) $(FLAGS) -I -c $< -o $@
+%.o : %.c
+	gcc $(FLAGS) -c $< -o $@
 
-# Правило для убунту
-#Удалить потом или закоментировать
+clean :
+	@rm -f $(OBJ)
 
-#so:
-#	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
-#	gcc -nostartfiles -shared -o libft.so $(OBJS)
+fclean : clean
+	@rm -f $(NAME)
 
-clean:
-				@$(RM) -f $(OBJS)
+re : fclean all
 
-fclean:		clean
-				@$(RM) $(NAME)
-
-re:			fclean all
-
-.PHONY:		all, clean, fclean, re
+.PHONY : all clean fclean
