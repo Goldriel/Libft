@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 18:58:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/09 19:45:52 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/10 23:19:50 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ LIST =		ft_isalnum.c\
 			ft_memset.c\
 			ft_bzero.c\
 			ft_memcpy.c\
-			ft_memmove.c\
 			ft_memmove.c
 
 OBJ = $(patsubst %.c, %.o, $(LIST))
@@ -36,11 +35,19 @@ $(NAME) : $(OBJ)
 %.o : %.c
 	gcc $(FLAGS) -c $< -o $@
 
+#правило для убунту
+#************************************
+
+so:
+	clang -nostartfiles -shared -o libft.so $(OBJ)
+
+#************************************
+
 clean :
-	@rm -f $(OBJ)
+	rm -f $(OBJ)
 
 fclean : clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re : fclean all
 
