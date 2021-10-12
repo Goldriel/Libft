@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 16:24:38 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/12 17:37:25 by jarrakis         ###   ########.fr       */
+/*   Created: 2021/10/12 18:00:04 by jarrakis          #+#    #+#             */
+/*   Updated: 2021/10/12 18:13:46 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-int ch помещаемый символ
-void *buf строка в которую помещаем символ ch
-size_t count колличество символов ch помещаемых в строку *buf
-возвращаем строчку *buf
-*/
-
-void	*ft_memset(void *buf, int ch, size_t count)
+int	ft_toupper(int c)
 {
-	size_t	i;
+	unsigned char	ch;
 
-	i = 0;
-	while (i < count)
-	{
-		((char *)buf)[i] = (unsigned char)ch;
-		i ++;
-	}
-	return (buf);
+	ch = c;
+	if (ch >= 'a' && ch <= 'z')
+		ch = ch - 32;
+	return (ch);
 }
