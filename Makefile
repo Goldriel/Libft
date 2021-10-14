@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 18:58:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/14 17:28:00 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/14 20:09:46 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ LIST =		ft_isalnum.c\
 			ft_strchr.c\
 			ft_strrchr.c\
 			ft_strncmp.c\
-			ft_memchr.c
+			ft_memchr.c\
+			ft_memcmp.c
 
 OBJ = $(patsubst %.c, %.o, $(LIST))
 
@@ -58,4 +59,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean
+.PHONY : all clean fclean re
