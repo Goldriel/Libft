@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 18:58:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/14 21:15:59 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/14 22:31:25 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,9 @@ LIST =		ft_isalnum.c\
 			ft_strrchr.c\
 			ft_strncmp.c\
 			ft_memchr.c\
-			ft_memcmp.c
+			ft_memcmp.c\
+			ft_strdup.c
+			
 
 OBJ = $(patsubst %.c, %.o, $(LIST))
 
@@ -40,7 +42,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	ar rcs $(NAME) $?
 
-%.o : %.c
+%.o : %.c libft.h
 	gcc $(FLAGS) -c $< -o $@
 
 #правило для убунту
