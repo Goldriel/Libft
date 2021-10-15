@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 18:58:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/14 22:31:25 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/15 17:23:17 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,8 @@ LIST =		ft_isalnum.c\
 			ft_strncmp.c\
 			ft_memchr.c\
 			ft_memcmp.c\
-			ft_strdup.c
+			ft_strdup.c\
+			ft_calloc.c
 			
 
 OBJ = $(patsubst %.c, %.o, $(LIST))
