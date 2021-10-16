@@ -6,7 +6,7 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 19:04:50 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/15 20:34:09 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/16 17:26:20 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	ft_spase(char c)
 int	ft_atoi(const char *str)
 {
 	int			i;
-	long long	n;
+	long int	n;
 	int			sign;
 
 	i = 0;
@@ -32,7 +32,7 @@ int	ft_atoi(const char *str)
 	n = 0;
 	while (ft_spase(str[i]))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign *= -1;
@@ -41,11 +41,11 @@ int	ft_atoi(const char *str)
 	while (ft_isdigit(str[i]))
 	{
 		n = 10 * n + (str[i] - '0');
+		if (sign * n < -2147483648)
+			return (0);
+		if (sign * n > 2147483647)
+			return (-1);
 		i++;
 	}
-	if (sign * n < -2147483648)
-		return (0);
-	if (sign * n > 2147483647)
-		return (-1);
 	return (sign * n);
 }
