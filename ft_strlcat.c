@@ -6,7 +6,7 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:55:12 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/16 20:22:55 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/17 17:34:34 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	const char *odst = dest;
-	const char *osrc = src;
-	size_t n = size;
-	size_t dlen;
+	size_t	i;
+	size_t	j;
+	size_t	dest_len;
+	size_t	src_len;
 
-	while (n-- != 0 && *dest != '\0')
-		dest++;
-	dlen = dest - odst;
-	n = size - dlen;
-
-	if (n-- == 0)
-		return(dlen + ft_strlen(src));
-	while (*src != '\0') {
-		if (n != 0) {
-			*dest++ = *src;
-			n--;
+	src_len = ft_strlen(src);
+	dest_len = ft_strlen(dest);
+	j = dest_len;
+	i = 0;
+	if (dest_len < size - 1 && size > 0)
+	{
+		while (src[i] && dest_len + i < size - 1)
+		{
+			dest[j] = src[i];
+			j++;
+			i++;
 		}
-		src++;
+		dest[j] = '\0';
 	}
-	*dest = '\0';
-
-	return(dlen + (src - osrc));	
+	if (dest_len >= size)
+		dest_len = size;
+	return (dest_len + src_len);
 }
