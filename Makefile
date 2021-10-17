@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 18:58:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/17 19:15:58 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/17 20:30:58 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,8 @@ LIST =		ft_isalnum.c\
 			ft_atoi.c\
 			ft_strlcat.c\
 			ft_strnstr.c\
-			ft_substr.c
+			ft_substr.c\
+			ft_strjoin.c
 			
 
 OBJ = $(patsubst %.c, %.o, $(LIST))
