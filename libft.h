@@ -6,7 +6,7 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:44:46 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/15 20:16:47 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/17 17:39:33 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strdup(const char *s1);
 void	*ft_calloc(size_t num, size_t size);
 int		ft_atoi(const char *str);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif
