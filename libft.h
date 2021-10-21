@@ -6,7 +6,7 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:44:46 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/21 20:07:05 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/21 23:59:59 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ void    ft_putstr_fd(char *s, int fd);
 void    ft_putendl_fd(char *s, int fd);
 void    ft_putnbr_fd(int n, int fd);
 char    *ft_itoa(int n);
+char    **ft_split(char const *s, char c);
 
 #endif
