@@ -6,11 +6,12 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 23:24:49 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/23 17:46:26 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/23 19:21:04 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static char	**ft_free_str(char **split, unsigned int len)
 {
