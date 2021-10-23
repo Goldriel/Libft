@@ -6,7 +6,7 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 23:24:49 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/22 19:29:47 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/23 17:46:26 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ static unsigned int	ft_count_str(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char			**split;
-	char			*str;
 	unsigned int	len;
 	unsigned int	count_str;
 	unsigned int	i;
@@ -83,15 +82,14 @@ char	**ft_split(char const *s, char c)
 	if (split == NULL)
 		return (NULL);
 	i = 0;
-	str = (char *)s;
 	len = 0;
 	while (i < count_str)
 	{
-		ft_next_str(&str, &len, c);
+		ft_next_str((char **)&s, &len, c);
 		split[i] = (char *)malloc(sizeof(char) * (len + 1));
 		if (split[i] == NULL)
 			return (ft_free_str(split, i));
-		ft_strlcpy(split[i], str, len + 1);
+		ft_strlcpy(split[i], (char *)s, len + 1);
 		i++;
 	}
 	split[i] = NULL;
