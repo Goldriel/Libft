@@ -6,38 +6,12 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 15:46:12 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/19 20:04:25 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/24 20:46:41 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	int		i;
-	char	*new_str;
-
-	if (s1 == NULL || set == NULL)
-		return (NULL);
-	i = ft_strlen(s1) - 1;
-	new_str = ft_strdup(s1);
-	if (new_str == NULL)
-		return (NULL);
-	while (i >= 0 && ft_strchr(set, new_str[i]) != NULL)
-	{
-		new_str[i] = '\0';
-		i--;
-	}
-	i = 0;
-	while (new_str[i] != '\0' && ft_strchr(set, new_str[i]) != NULL)
-	{
-		ft_memmove(&new_str[i], &new_str[i + 1], ft_strlen(s1));
-		i++;
-	}
-	return (new_str);
-}
-*/
 static int	ft_char_in_set(char c, char const *set)
 {
 	size_t	i;
