@@ -6,7 +6,7 @@
 #    By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 18:58:28 by jarrakis          #+#    #+#              #
-#    Updated: 2021/10/22 00:00:14 by jarrakis         ###   ########.fr        #
+#    Updated: 2021/10/25 18:50:35 by jarrakis         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,14 +59,6 @@ $(NAME) : $(OBJ)
 
 %.o : %.c libft.h
 	gcc $(FLAGS) -c $< -o $@
-
-#правило для убунту
-#************************************
-
-so:
-	clang -nostartfiles -shared -o libft.so $(OBJ)
-
-#************************************
 
 clean :
 	rm -f $(OBJ)
