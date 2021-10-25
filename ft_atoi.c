@@ -6,11 +6,15 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 19:04:50 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/16 17:26:20 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/25 18:28:20 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	converts a number of type int to a string
+*/
 
 static int	ft_spase(char c)
 {

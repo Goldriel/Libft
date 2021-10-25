@@ -6,7 +6,7 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:24:38 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/24 20:48:02 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/25 17:01:47 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memset(void *buf, int ch, size_t count)
 	while (i < count)
 	{
 		((char *)buf)[i] = (unsigned char)ch;
-		i ++;
+		i++;
 	}
 	return (buf);
 }

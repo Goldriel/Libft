@@ -6,11 +6,15 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 18:13:14 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/22 18:45:04 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/25 18:33:23 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Converts a string to int
+*/
 
 static void	ft_strrev(char *buf)
 {

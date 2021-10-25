@@ -6,11 +6,17 @@
 /*   By: jarrakis <jarrakis@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:14:01 by jarrakis          #+#    #+#             */
-/*   Updated: 2021/10/11 19:54:16 by jarrakis         ###   ########.fr       */
+/*   Updated: 2021/10/25 18:41:48 by jarrakis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	The memmove function copies n bytes from the array (memory area)
+**	pointed to by source to the array (memory area) pointed to by destination.
+**	In this case, arrays (memory areas) can intersect. 
+*/
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
